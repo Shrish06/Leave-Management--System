@@ -57,27 +57,49 @@ src/main/java/com/company/leavemanagement
 - Maven 3.8+
 - MySQL 8 running locally (or update `application.properties`)
 
+
 ## Setup & Run
 
-1. **Create the database** (optional — `createDatabaseIfNotExist=true` handles it automatically):
-   ```sql
-   CREATE DATABASE leave_management_db;
-   ```
+### Prerequisites
+- Java 17 or higher
+- Maven 3.8+
+- MySQL 8+
 
-2. **Configure credentials** in `src/main/resources/application.properties`:
-   ```properties
-   spring.datasource.username=root
-   spring.datasource.password=your_password
-   ```
+### 1. Clone the repository
 
-3. **Build & run**:
-   ```bash
-   mvn clean install
-   mvn spring-boot:run
-   ```
-   The API will start on `http://localhost:8080`.
+git clone https://github.com/Shrish06/Leave-Management--System.git
 
-4. **Explore the API** at `http://localhost:8080/swagger-ui.html`.
+cd Leave-Management--System
+
+### 2. Create the database
+
+CREATE DATABASE leave_management_db;
+
+### 3. Configure environment variables
+
+Set the following environment variables:
+
+DB_URL=jdbc:mysql://localhost:3306/leave_management_db
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+JWT_SECRET=your_secure_jwt_secret
+
+Refer to `.env.example` for the required variable names.
+
+Note: Spring Boot reads these values from the operating system environment.
+
+### 4. Run the application
+
+mvn clean install
+
+mvn spring-boot:run
+
+### 5. Access the API
+
+Application: http://localhost:8080
+
+Swagger UI: http://localhost:8080/swagger-ui.html
+
 
 ## API Overview
 
