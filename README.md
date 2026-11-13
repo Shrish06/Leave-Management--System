@@ -166,4 +166,4 @@ Authorization: Bearer <manager_token>
 
 - Every new user gets a default leave balance (`app.leave.default-balance`, 20 days) on registration.
 - Leave balance is only deducted once a manager **approves** a request (not while it's pending).
-- This project was not compiled in this environment (no Maven/internet access here); run `mvn clean install` locally to build and verify.
+
